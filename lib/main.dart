@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Matchmaker',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
         // This makes the visual density adapt to the platform that you run
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.
@@ -80,6 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
+
         child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
@@ -98,12 +99,33 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'You are a motherfucker',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const <Widget>[
+                Icon(
+                  Icons.favorite,
+                  color: Colors.pink,
+                  size: 24.0,
+                  semanticLabel: 'Text to announce in accessibility modes',
+                ),
+                Icon(
+                  Icons.audiotrack,
+                  color: Colors.green,
+                  size: 30.0,
+                ),
+                Icon(
+                  Icons.beach_access,
+                  color: Colors.blue,
+                  size: 36.0,
+                ),
+              ],
+            )
           ],
         ),
       ),
